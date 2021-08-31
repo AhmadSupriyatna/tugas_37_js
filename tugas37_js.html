@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+        <meta charset="utf-8" />
+        <title>Belajar Javascript - NIOMIC</title>
+ </head>
+ <body>
+        <button type="button" onclick="jalankan()" name="button">Jalankan</button>
+        <br />
+        <br />
+        <hr />
+        Atribut <b>getNamedItem()</b> :
+        <p id="pertama">contoh</p>
+        <hr />
+        Atribut <b>name()</b> :
+        <p id="kedua">contoh</p>
+        <hr />
+        Atribut <b>length()</b> :
+        <p id="ketiga">contoh</p>
+        <hr />
+        
+        <script>
+            function jalankan(){
+                var a = document.getElementsByTagName("button")[0];
+                var b = a.attributes.getNamedItem("onclick").value;
+                
+                document.getElementById("pertama").innerHTML=b;
+                document.getElementById("kedua").innerHTML=a.attributes[2].name;
+                document.getElementById("ketiga").innerHTML=a.attributes.length;
+            }
+        </script>
+ </body>
+</html>
